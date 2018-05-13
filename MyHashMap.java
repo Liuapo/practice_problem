@@ -143,4 +143,21 @@ public class MyHashMap<K, V> {
 			}
 		}
 	}
+	
+	public static void main(String[] args) {
+		MyHashMap<Integer, Integer> map = new MyHashMap<>();
+		map.put(0, 1);
+		System.out.println(map.get(0));
+		map.put(0, 2);
+		System.out.println(map.containsKey(1));
+		System.out.println(map.get(0));
+		map.remove(0);
+		System.out.println(map.containsKey(0));
+		for (int i = 10; i < 40; i++) {
+			map.put(i, 2 * i);
+		}
+		for (int i = 10; i < 40; i++) {
+			System.out.println(map.get(i));
+		}
+	}
 }
